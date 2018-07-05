@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+import sys
+sys.argv = ['pdm']
 import keras
 from keras.applications.vgg19 import VGG19
 from keras.applications.vgg19 import preprocess_input, decode_predictions

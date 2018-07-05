@@ -22,6 +22,7 @@ int main(int argc, char *argv[]){
 	pModule = PyImport_Import(pName);
 	if ( !pModule ){
 		printf("Can't find Module\n");
+		PyErr_Print();
 		return -1;
 	}
 	pDict = PyModule_GetDict(pModule);

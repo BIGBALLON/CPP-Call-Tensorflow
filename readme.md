@@ -39,6 +39,8 @@ It will download weight file ``vgg19_weights_tf_dim_ordering_tf_kernels.h5`` and
 
 ## Compile 
 
+### use Makefile
+
 Using ``make all`` to Compile your cpp file.  
 Make sure your python's version is correct.
 
@@ -55,11 +57,32 @@ so I use the following cmd to compile
 g++ -std=c++11 -Wall -O3 prediction.cpp -lpython3.5m -L/usr/include/python3.5m/ -I/usr/include/python3.5m/ -o pred_test
 ```
 
+### use Cmake
+
+I just write a ``CMakeLists.txt``, which can help you to compile your cpp code.  
+So just use the following cmd:
+
+
+```
+mkdir build && cd build
+cmake ../
+make
+cd ../ 
+```
+
+Then you will see a executable file ``classifier``, just use ``./classifier`` to run the program.
+
+
 
 ## Usage
 
+### Makefile
 
 ``make all`` to compile, then ``./pred_test`` to run c++ program.
+
+### Cmake
+
+use ``./classifier`` to run the program after building.
 
 Then you can see it works:
 
@@ -80,3 +103,6 @@ Then you can see it works:
  ===========> CALLING FINISHED <===========
 (deeplearning) bg@bg-cgi:~/Desktop/C_python$ 
 ```
+
+
+Feel free to contact me if you have any question. 
